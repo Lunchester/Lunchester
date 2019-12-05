@@ -1,23 +1,44 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import StockList from '@/views/StockList.vue';
+import StockAdd from '@/views/StockAdd.vue';
+import Scanner from '@/views/Scanner.vue';
+import SpecialDay from '@/views/SpecialDay.vue';
+import GroceryList from '@/views/GroceryList.vue';
+import GroceryAdd from '@/views/GroceryAdd.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: Home
+    name: "stock-list",
+    component: StockList
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/stock/add",
+    name: "stock-add",
+    component: StockAdd
+  },
+  {
+    path: "/scanner",
+    name: "scanner",
+    component: Scanner
+  },
+  {
+    path: "/special",
+    name: "special",
+    component: SpecialDay
+  },
+  {
+    path: "/grocery",
+    name: "grocery-list",
+    component: GroceryList
+  },
+  {
+    path: "/grocery",
+    name: "grocery-add",
+    component: GroceryAdd
   }
 ];
 
