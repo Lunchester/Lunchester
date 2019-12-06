@@ -3,6 +3,9 @@
     <div class="header">
       <h1>Grocery List</h1>
     </div>
+    <div>
+      <Search />
+    </div>
     <div class="products">
       <Item
         title="Boeren tarwe tijger"
@@ -65,10 +68,12 @@
 <script lang="ts">
 import Vue from "vue";
 import Item from "@/components/shared/BaseItemComponent.vue";
+import Search from "@/components/shared/BaseSearchComponent.vue";
 
 export default Vue.extend({
   components: {
-    Item
+    Item,
+    Search
   }
 });
 </script>
@@ -78,7 +83,7 @@ export default Vue.extend({
   text-align: center;
   color: #fff;
   font-size: 18px;
-  padding: 24px 0;
+  padding: 24px 0 48px;
   background: #7ecf95;
 }
 
