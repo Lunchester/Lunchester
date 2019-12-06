@@ -26,8 +26,8 @@ const routes = [
     component: Scanner
   },
   {
-    path: "/special",
-    name: "special",
+    path: "/special-day",
+    name: "special-day",
     component: SpecialDay
   },
   {

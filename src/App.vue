@@ -1,9 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
+    <NavBar></NavBar>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+import NavBar from "@/components/shared/NavBarComponent.vue";
+
+export default Vue.extend({
+  components: {
+    NavBar
+  }
+});
+</script>
+
+<style scoped>
+#app {
+  position: relative;
+}
+</style>
