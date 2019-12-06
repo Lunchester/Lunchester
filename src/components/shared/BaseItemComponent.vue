@@ -1,16 +1,13 @@
 <template>
   <div class="product">
     <div class="product__image">
-      <img
-        src="/img/boeren-tarwe-tijger-half.png"
-        alt="Boeren tarwe tijger half"
-      />
+      <img :src="image" alt="Boeren tarwe tijger half" />
     </div>
     <div>
-      <h4 class="product__title">Boeren tarwe tijger</h4>
-      <span class="product__date">Added on 20.11</span>
+      <h4 class="product__title">{{ title }}</h4>
+      <span class="product__date">{{ body }}</span>
     </div>
-    <div class="product__quantity">
+    <div v-if="quantityControls" class="product__quantity">
       <Icon
         class="quantity__icon"
         name="minus"
@@ -27,6 +24,15 @@
         strokeWidth="2"
       />
     </div>
+    <template v-if="addControls">
+      <Icon
+        class="product__add"
+        name="plus"
+        width="20"
+        height="20"
+        strokeWidth="2"
+      />
+    </template>
   </div>
 </template>
 
@@ -37,6 +43,26 @@ import Icon from "@/components/shared/BaseIconComponent.vue";
 export default Vue.extend({
   components: {
     Icon
+  },
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    body: {
+      type: String
+    },
+    image: {
+      type: String
+    },
+    quantityControls: {
+      type: Boolean,
+      default: false
+    },
+    addControls: {
+      type: Boolean,
+      default: false
+    }
   }
 });
 </script>
@@ -91,5 +117,13 @@ export default Vue.extend({
 .quantity__number {
   margin: 0 14px;
   font-size: 18px;
+}
+
+.product__add {
+  background: #7ecf95;
+  border-radius: 999px;
+  color: #fff;
+  padding: 2px;
+  margin-left: auto;
 }
 </style>

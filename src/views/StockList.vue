@@ -1,17 +1,59 @@
 <template>
   <div>
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
+    <Item
+      title="Boeren tarwe tijger"
+      body="Added on 20.11"
+      image="/img/boeren-tarwe-tijger-half.png"
+      quantityControls="true"
+    />
   </div>
 </template>
 
