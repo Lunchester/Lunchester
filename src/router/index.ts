@@ -1,11 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import StockList from '@/views/StockList.vue';
-import StockAdd from '@/views/StockAdd.vue';
-import Scanner from '@/views/Scanner.vue';
-import SpecialDay from '@/views/SpecialDay.vue';
-import GroceryList from '@/views/GroceryList.vue';
-import GroceryAdd from '@/views/GroceryAdd.vue';
+import StockList from "@/views/StockList.vue";
+import StockAdd from "@/views/StockAdd.vue";
+import Scanner from "@/views/Scanner.vue";
+import SpecialDay from "@/views/SpecialDay.vue";
+import GroceryList from "@/views/GroceryList.vue";
+import GroceryAdd from "@/views/GroceryAdd.vue";
 
 Vue.use(VueRouter);
 
