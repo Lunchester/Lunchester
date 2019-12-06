@@ -1,11 +1,7 @@
 <template>
   <div>
-    <div class="header">
-      <h1>Grocery List</h1>
-    </div>
-    <div>
-      <Search />
-    </div>
+    <Header title="Grocery list" />
+    <Search />
     <div class="products">
       <Item
         title="Boeren tarwe tijger"
@@ -69,24 +65,18 @@
 import Vue from "vue";
 import Item from "@/components/shared/BaseItemComponent.vue";
 import Search from "@/components/shared/BaseSearchComponent.vue";
+import Header from "@/components/shared/BaseHeaderComponent.vue";
 
 export default Vue.extend({
   components: {
     Item,
-    Search
+    Search,
+    Header
   }
 });
 </script>
 
 <style scoped>
-.header {
-  text-align: center;
-  color: #fff;
-  font-size: 18px;
-  padding: 24px 0 48px;
-  background: #7ecf95;
-}
-
 .product:nth-child(odd) {
   background: #f5f5f5;
 }
