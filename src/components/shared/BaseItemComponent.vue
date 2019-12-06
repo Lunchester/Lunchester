@@ -2,7 +2,7 @@
   <div class="product">
     <div class="product__image">
       <img
-        src="https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/977982.png"
+        src="/img/boeren-tarwe-tijger-half.png"
         alt="Boeren tarwe tijger half"
       />
     </div>
@@ -31,7 +31,7 @@ export default Vue.extend({});
 }
 
 .product__image {
-  background: #fff;
+  background: #ffffff;
   border-radius: 9999px;
   padding: 8px;
   margin-right: 16px;
@@ -43,7 +43,13 @@ export default Vue.extend({});
 }
 
 .product__title {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.product__date {
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .product__quantity {

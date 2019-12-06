@@ -108,6 +108,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Lato", sans-serif;
 }
 
 article,
