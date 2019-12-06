@@ -1,5 +1,5 @@
 <template>
-  <svg class="icon" :width="width" :height="height">
+  <svg class="icon" :width="width" :height="height" :stroke-width="strokeWidth">
     <use v-bind="{ 'xlink:href': '/img/feather-sprite.svg#' + name }" />
   </svg>
 </template>
@@ -18,6 +18,10 @@ export default Vue.extend({
     height: {
       type: [Number, String],
       default: 24
+    },
+    strokeWidth: {
+      type: [Number, String],
+      default: 1
     }
   }
 });
@@ -26,7 +30,6 @@ export default Vue.extend({
 <style scoped>
 .icon {
   stroke: currentColor;
-  stroke-width: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
