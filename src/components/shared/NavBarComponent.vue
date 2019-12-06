@@ -3,22 +3,22 @@
     <ul class="navbar__items">
       <li>
         <router-link class="navbar__item" :to="{ name: 'stock-list' }">
-          <Icon name="package"></Icon>
+          <Icon name="package" width="30" height="30"></Icon>
         </router-link>
       </li>
       <li>
         <router-link class="navbar__item" :to="{ name: 'scanner' }">
-          <Icon name="camera"></Icon>
+          <Icon name="camera" width="30" height="30"></Icon>
         </router-link>
       </li>
       <li>
         <router-link class="navbar__item" :to="{ name: 'special-day' }">
-          <Icon name="gift"></Icon>
+          <Icon name="gift" width="30" height="30"></Icon>
         </router-link>
       </li>
       <li>
         <router-link class="navbar__item" :to="{ name: 'grocery-list' }">
-          <Icon name="shopping-cart"></Icon>
+          <Icon name="shopping-cart" width="30" height="30"></Icon>
         </router-link>
       </li>
     </ul>
@@ -43,7 +43,9 @@ export default Vue.extend({
   left: 0;
   right: 0;
   width: calc(100% - 32px);
-  padding: 16px 16px;
+  padding: 16px 16px 8px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 16px 16px 0px 0px;
 }
 
 .navbar__items {
@@ -52,6 +54,7 @@ export default Vue.extend({
   margin: 0;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .navbar__item {
