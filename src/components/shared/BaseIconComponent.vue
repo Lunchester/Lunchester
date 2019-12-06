@@ -1,12 +1,14 @@
 <template>
-  <svg class="feather-icon" :width="width" :height="height">
+  <svg class="icon" :width="width" :height="height">
     <use v-bind="{ 'xlink:href': '/img/feather-sprite.svg#' + name }" />
   </svg>
 </template>
 
-<script>
-export default {
-  name: "Icon",
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "Icon" as string,
   props: {
     name: String,
     width: {
@@ -18,11 +20,11 @@ export default {
       default: 24
     }
   }
-};
+});
 </script>
 
 <style scoped>
-.feather-icon {
+.icon {
   stroke: currentColor;
   stroke-width: 1;
   stroke-linecap: round;
