@@ -46,6 +46,7 @@ export default Vue.extend({
   padding: 16px 16px 8px;
   box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.05);
   border-radius: 16px 16px 0px 0px;
+  background: #ffffff;
 }
 
 .navbar__items {
