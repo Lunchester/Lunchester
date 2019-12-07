@@ -11,7 +11,7 @@ const apiClient = axios.create({
 });
 
 export default {
-  getStock() {
-    return apiClient.get("/stock");
+  getGroceries() {
+    return apiClient.get("/groceries");
   }
 };
