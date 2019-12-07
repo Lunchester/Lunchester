@@ -1,0 +1,204 @@
+{
+  "stock": [
+    {
+      "id": 2,
+      "quantity": 3
+    },
+    {
+      "id": 3,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "quantity": 4
+    },
+    {
+      "id": 7,
+      "quantity": 2
+    },
+    {
+      "id": 9,
+      "quantity": 2
+    },
+    {
+      "id": 14,
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "quantity": 1
+    },
+    {
+      "id": 18,
+      "quantity": 6
+    },
+    {
+      "id": 20,
+      "quantity": 4
+    }
+  ],
+  "groceryList": [
+    {
+      "id": 3,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "quantity": 2
+    },
+    {
+      "id": 9,
+      "quantity": 2
+    },
+    {
+      "id": 15,
+      "quantity": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "description": "Fijn volkoren heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/680010.png",
+      "price": 1.00
+    },
+    {
+      "id": 2,
+      "description": "Rond volkoren heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/885731.png",
+      "price": 1.69
+    },
+    {
+      "id": 3,
+      "description": "Rond donker meergranen heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/885739.png",
+      "price": 2.29
+    },
+    {
+      "id": 4,
+      "description": "Vloerbrood extra donker heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/940606.png",
+      "price": 1.09
+    },
+    {
+      "id": 5,
+      "description": "Rond tarwe heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/679983.png",
+      "price": 1.00
+    },
+    {
+      "id": 6,
+      "description": "Fijn volkoren half",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/680013.png",
+      "price": 2.29
+    },
+    {
+      "id": 7,
+      "description": "Boeren tarwe tijger heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/977978.png",
+      "price": 1.69
+    },
+    {
+      "id": 8,
+      "description": "Rond wit heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/679977.png",
+      "price": 1.19
+    },
+    {
+      "id": 9,
+      "description": "Rond licht meerzaden heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/885735.png",
+      "price": 2.59
+    },
+    {
+      "id": 10,
+      "description": "Rond wit heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/885727.png",
+      "price": 2.59
+    },
+    {
+      "id": 11,
+      "description": "Vloerbrood donker zonnepit heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/940594.png",
+      "price": 2.05
+    },
+    {
+      "id": 12,
+      "description": "Vloerbrood donker heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/940602.png",
+      "price": 0.55
+    },
+    {
+      "id": 13,
+      "description": "Rond tarwe heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/885729.png",
+      "price": 1.35
+    },
+    {
+      "id": 14,
+      "description": "Rond donker meergranen half",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/885755.png",
+      "price": 1.35
+    },
+    {
+      "id": 15,
+      "description": "Vloerbrood Waldkorn oergranen heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/940610.png",
+      "price": 1.35
+    },
+    {
+      "id": 16,
+      "description": "Boeren tarwe tijger half",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/977982.png",
+      "price": 1.19
+    },
+    {
+      "id": 17,
+      "description": "Rond wit half",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/679980.png",
+      "price": 1.35
+    },
+    {
+      "id": 18,
+      "description": "Waldkorn donker half",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/795168.png",
+      "price": 1.49
+    },
+    {
+      "id": 19,
+      "description": "Vloerbrood tijger wit heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/940584.png",
+      "price": 0.79
+    },
+    {
+      "id": 20,
+      "description": "Waldkorn donker heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/795132.png",
+      "price": 0.79
+    },
+    {
+      "id": 21,
+      "description": "Rond tarwe half",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/679986.png",
+      "price": 2.79
+    },
+    {
+      "id": 22,
+      "description": "Boeren wit tijger heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/978015.png",
+      "price": 1.39
+    },
+    {
+      "id": 23,
+      "description": "Casino wit heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/680016.png",
+      "price": 1.45
+    },
+    {
+      "id": 24,
+      "description": "Vloerbrood meergranen heel",
+      "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/940598.png",
+      "price": 1.99
+    }
+  ]
+}
