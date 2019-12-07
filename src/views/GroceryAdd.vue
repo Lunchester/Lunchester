@@ -8,55 +8,55 @@
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
       <Item
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
       <Item
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
       <Item
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
       <Item
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
       <Item
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
       <Item
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
       <Item
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
       <Item
         title="Boeren tarwe tijger"
         body="€2,60"
         image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
+        :addControls="true"
       />
     </div>
   </div>
