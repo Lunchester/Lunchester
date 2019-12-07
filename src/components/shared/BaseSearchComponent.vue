@@ -1,9 +1,35 @@
 <template>
   <div class="search">
-    <input class="search__input" type="text" placeholder="Search" />
-    <button class="search__button">Add</button>
+    <input
+      class="search__input"
+      :class="{ 'search__input--full': !hasAddButton }"
+      type="text"
+      placeholder="Search"
+    />
+    <router-link
+      class="search__button"
+      v-if="hasAddButton"
+      :to="{ name: addButtonLink }"
+    >
+      Add
+    </router-link>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+  props: {
+    hasAddButton: {
+      type: Boolean,
+      default: false
+    },
+    addButtonLink: {
+      type: String
+    }
+  }
+});
+</script>
 
 <style scoped>
 .search {
@@ -39,8 +65,11 @@
   background-size: 28px 28px;
 }
 
+.search__input--full {
+  width: calc(100% - 48px);
+}
+
 .search__button {
-  border: none;
   background: #7ecf95;
   border-radius: 999px;
   color: #fff;
@@ -48,5 +77,9 @@
   font-size: 18px;
   padding: 0 24px;
   margin-left: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 </style>

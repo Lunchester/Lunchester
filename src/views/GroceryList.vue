@@ -1,7 +1,8 @@
 <template>
   <div>
     <Header title="Grocery list" />
-    <Search />
+    <Search hasAddButton="true" addButtonLink="grocery-add" />
+
     <div class="products">
       <Item
         title="Boeren tarwe tijger"

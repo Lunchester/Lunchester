@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header title="Stock" />
-    <Search />
+    <Search hasAddButton="true" addButtonLink="stock-add" />
     <Item
       title="Boeren tarwe tijger"
       body="Added on 20.11"
