@@ -36,7 +36,7 @@ const routes = [
     component: GroceryList
   },
   {
-    path: "/grocery",
+    path: "/grocery/add",
     name: "grocery-add",
     component: GroceryAdd
   }
