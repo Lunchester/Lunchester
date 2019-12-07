@@ -37,7 +37,7 @@
       "quantity": 4
     }
   ],
-  "groceryList": [
+  "groceries": [
     {
       "id": 3,
       "quantity": 1
