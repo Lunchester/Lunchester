@@ -1,70 +1,21 @@
 <template>
-  <div>
+  <div class="items">
     <Header title="Add to grocery list" />
     <Search />
 
-    <div class="products">
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :addControls="true"
-      />
-    </div>
+    <Item
+      v-for="product in products"
+      :key="product.id"
+      :product="product"
+      :addControls="true"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Item from "@/components/shared/BaseItemComponent.vue";
+import { mapState } from "vuex";
+import Item from "@/components/grocery/GroceryItemComponent.vue";
 import Search from "@/components/shared/BaseSearchComponent.vue";
 import Header from "@/components/shared/BaseHeaderComponent.vue";
 
@@ -73,12 +24,19 @@ export default Vue.extend({
     Item,
     Search,
     Header
+  },
+  computed: {
+    ...mapState("product", ["products"])
   }
 });
 </script>
 
 <style scoped>
-.product:nth-child(odd) {
+.items {
+  margin-bottom: 60px;
+}
+
+.item:nth-child(odd) {
   background: #f5f5f5;
 }
 </style>
