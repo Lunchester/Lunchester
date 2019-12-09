@@ -3,24 +3,19 @@
     <Header title="Grocery list" />
     <Search :hasAddButton="true" addButtonLink="grocery-add" />
 
-    <div class="products">
-      <Item
-        v-for="product in products"
-        :key="product.id"
-        :title="product.title"
-        :body="product.price"
-        :image="product.image"
-        :quantity="product.quantity"
-        :quantityControls="true"
-      />
-    </div>
+    <Item
+      v-for="product in products"
+      :key="product.id"
+      :product="product"
+      :quantityControls="true"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import { mapGetters } from "vuex";
-import Item from "@/components/shared/BaseItemComponent.vue";
+import Item from "@/components/grocery/GroceryItemComponent.vue";
 import Search from "@/components/shared/BaseSearchComponent.vue";
 import Header from "@/components/shared/BaseHeaderComponent.vue";
 

@@ -34,8 +34,6 @@ const mutations = {
     const stockItem = state.items.find(item => item.id == id);
     const stockItemIndex = state.items.indexOf(stockItem);
 
-    console.log(stockItem, stockItemIndex);
-
     if (stockItemIndex > -1) {
       state.items.splice(stockItemIndex, 1);
     }
@@ -52,7 +50,7 @@ const mutations = {
 
 const actions = {
   fetchStockItems({ commit }) {
-    StockService.getStock()
+    StockService.getStockItems()
       .then(response => {
         commit("SET_STOCK_ITEMS", response.data);
       })
