@@ -1,7 +1,7 @@
 <template>
   <div class="product">
     <div class="product__image">
-      <img :src="image" alt="Boeren tarwe tijger half" />
+      <img :src="image" :alt="title" />
     </div>
     <div>
       <h4 class="product__title">{{ title }}</h4>
@@ -15,7 +15,7 @@
         height="20"
         strokeWidth="2"
       />
-      <span class="quantity__number">2</span>
+      <span class="quantity__number">{{ quantity }}</span>
       <Icon
         class="quantity__icon"
         name="plus"
@@ -54,6 +54,9 @@ export default Vue.extend({
     },
     image: {
       type: String
+    },
+    quantity: {
+      type: Number
     },
     quantityControls: {
       type: Boolean,

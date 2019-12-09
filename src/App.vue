@@ -12,6 +12,9 @@ import NavBar from "@/components/shared/NavBarComponent.vue";
 export default Vue.extend({
   components: {
     NavBar
+  },
+  created() {
+    this.$store.dispatch("product/fetchProducts");
   }
 });
 </script>

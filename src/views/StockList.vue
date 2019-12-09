@@ -1,66 +1,21 @@
 <template>
   <div>
     <Header title="Stock" />
-    <Search hasAddButton="true" addButtonLink="stock-add" />
+    <Search :hasAddButton="true" addButtonLink="stock-add" />
     <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      quantityControls="true"
+      v-for="product in products"
+      :key="product.id"
+      :title="product.title"
+      :image="product.image"
+      :quantity="product.quantity"
+      :quantityControls="true"
     />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import { mapGetters } from "vuex";
 import Item from "@/components/shared/BaseItemComponent.vue";
 import Search from "@/components/shared/BaseSearchComponent.vue";
 import Header from "@/components/shared/BaseHeaderComponent.vue";
@@ -70,6 +25,14 @@ export default Vue.extend({
     Item,
     Search,
     Header
+  },
+  created() {
+    this.$store.dispatch("stock/fetchStockItems");
+  },
+  computed: {
+    ...mapGetters({
+      products: "stock/getStockProducts"
+    })
   }
 });
 </script>

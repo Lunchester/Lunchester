@@ -5,57 +5,12 @@
 
     <div class="products">
       <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
-        :quantityControls="true"
-      />
-      <Item
-        title="Boeren tarwe tijger"
-        body="€2,60"
-        image="/img/boeren-tarwe-tijger-half.png"
+        v-for="product in products"
+        :key="product.id"
+        :title="product.title"
+        :body="product.price"
+        :image="product.image"
+        :quantity="product.quantity"
         :quantityControls="true"
       />
     </div>
@@ -64,6 +19,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapGetters } from "vuex";
 import Item from "@/components/shared/BaseItemComponent.vue";
 import Search from "@/components/shared/BaseSearchComponent.vue";
 import Header from "@/components/shared/BaseHeaderComponent.vue";
@@ -73,6 +29,14 @@ export default Vue.extend({
     Item,
     Search,
     Header
+  },
+  created() {
+    this.$store.dispatch("grocery/fetchGroceryItems");
+  },
+  computed: {
+    ...mapGetters({
+      products: "grocery/getGroceryProducts"
+    })
   }
 });
 </script>
