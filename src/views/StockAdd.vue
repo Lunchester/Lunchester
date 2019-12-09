@@ -1,67 +1,20 @@
 <template>
-  <div>
+  <div class="items">
     <Header title="Add item to stock" />
     <Search />
     <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
-    />
-    <Item
-      title="Boeren tarwe tijger"
-      body="Added on 20.11"
-      image="/img/boeren-tarwe-tijger-half.png"
-      addControls="true"
+      v-for="product in products"
+      :key="product.id"
+      :product="product"
+      :addControls="true"
     />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Item from "@/components/shared/BaseItemComponent.vue";
+import { mapState } from "vuex";
+import Item from "@/components/stock/StockItemComponent.vue";
 import Search from "@/components/shared/BaseSearchComponent.vue";
 import Header from "@/components/shared/BaseHeaderComponent.vue";
 
@@ -70,12 +23,19 @@ export default Vue.extend({
     Item,
     Search,
     Header
+  },
+  computed: {
+    ...mapState("product", ["products"])
   }
 });
 </script>
 
 <style scoped>
-.product:nth-child(odd) {
+.items {
+  margin-bottom: 60px;
+}
+
+.item:nth-child(odd) {
   background: #f5f5f5;
 }
 </style>

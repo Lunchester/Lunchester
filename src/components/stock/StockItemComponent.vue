@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <div class="item__image">
-      <img :src="product.image" :alt="product.title" />
+      <img :src="product.imgLink" :alt="product.title" />
     </div>
     <div>
       <h4 class="item__title">{{ product.title }}</h4>
@@ -33,6 +33,7 @@
         width="20"
         height="20"
         strokeWidth="2"
+        @click.native="addItemToStock(product)"
       />
     </template>
   </div>

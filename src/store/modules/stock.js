@@ -13,7 +13,7 @@ const getters = {
       return {
         id: id,
         title: product.title,
-        image: product.imgLink,
+        imgLink: product.imgLink,
         quantity: quantity
       };
     });
