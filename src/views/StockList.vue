@@ -1,13 +1,11 @@
 <template>
-  <div>
+  <div class="items">
     <Header title="Stock" />
     <Search :hasAddButton="true" addButtonLink="stock-add" />
     <Item
       v-for="product in products"
       :key="product.id"
-      :title="product.title"
-      :image="product.image"
-      :quantity="product.quantity"
+      :product="product"
       :quantityControls="true"
     />
   </div>
@@ -16,9 +14,9 @@
 <script lang="ts">
 import Vue from "vue";
 import { mapGetters } from "vuex";
-import Item from "@/components/shared/BaseItemComponent.vue";
 import Search from "@/components/shared/BaseSearchComponent.vue";
 import Header from "@/components/shared/BaseHeaderComponent.vue";
+import Item from "@/components/stock/StockItemComponent.vue";
 
 export default Vue.extend({
   components: {
@@ -38,7 +36,11 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.product:nth-child(odd) {
+.items {
+  margin-bottom: 60px;
+}
+
+.item:nth-child(odd) {
   background: #f5f5f5;
 }
 </style>
