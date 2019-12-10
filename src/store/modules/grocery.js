@@ -23,6 +23,9 @@ const getters = {
     return getters.getGroceryProducts.reduce((total, product) => {
       return total + product.price * product.quantity;
     }, 0);
+  },
+  getGroceryTaxPrice: (state, getters) => {
+    return getters.getGroceryTotalPrice * 0.09;
   }
 };
 

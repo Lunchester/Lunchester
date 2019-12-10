@@ -10,6 +10,11 @@
       :quantityControls="true"
     />
 
+    <div class="tax">
+      <span>Tax</span>
+      <span>€{{ totalTax.toFixed(2) }}</span>
+    </div>
+
     <div class="price">
       <span>Total</span>
       <span>€{{ totalPrice.toFixed(2) }}</span>
@@ -36,7 +41,8 @@ export default Vue.extend({
   computed: {
     ...mapGetters({
       products: "grocery/getGroceryProducts",
-      totalPrice: "grocery/getGroceryTotalPrice"
+      totalPrice: "grocery/getGroceryTotalPrice",
+      totalTax: "grocery/getGroceryTaxPrice"
     })
   }
 });
@@ -47,13 +53,21 @@ export default Vue.extend({
   background: #f5f5f5;
 }
 
-.price {
+.tax {
   display: flex;
   justify-content: space-between;
   margin: 16px 24px 0;
   padding: 16px 0;
+  border-top: 1px solid #cccccc;
+  color: #cccccc;
+  font-size: 18px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 24px;
   font-size: 24px;
   font-weight: 600;
-  border-top: 1px solid #e6e6e6;
 }
 </style>
