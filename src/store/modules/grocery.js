@@ -1,4 +1,5 @@
 import GroceryService from "@/services/GroceryService.ts";
+import StockService from "@/services/StockService";
 
 const state = {
   items: [],
@@ -60,7 +61,7 @@ const mutations = {
 
 const actions = {
   fetchGroceryItems({ commit }) {
-    GroceryService.getGroceries()
+    GroceryService.getGroceryItems()
       .then(response => {
         commit("SET_GROCERY_ITEMS", response.data);
       })
@@ -72,18 +73,46 @@ const actions = {
     const groceryItem = state.items.find(item => item.id === product.id);
 
     if (!groceryItem) {
-      commit("ADD_ITEM_TO_GROCERY", { id: product.id });
+      GroceryService.postGroceryItem({ id: product.id, quantity: 1 })
+        .then(() => {
+          commit("ADD_ITEM_TO_GROCERY", { id: product.id });
+        })
+        .catch(error => {
+          console.log("ERROR: " + error.message);
+        });
     } else {
-      commit("INCREMENT_ITEM_QUANTITY", groceryItem);
+      const newQuantity = groceryItem.quantity + 1;
+
+      GroceryService.patchGroceryItem(groceryItem, newQuantity)
+        .then(() => {
+          commit("INCREMENT_ITEM_QUANTITY", groceryItem);
+        })
+        .catch(error => {
+          console.log("ERROR: " + error.message);
+        });
     }
   },
   removeItemFromGrocery({ state, commit }, product) {
     const groceryItem = state.items.find(item => item.id === product.id);
 
     if (groceryItem.quantity == 1) {
-      commit("REMOVE_ITEM_FROM_GROCERY", { id: product.id });
+      GroceryService.deleteGroceryItem(product)
+        .then(() => {
+          commit("REMOVE_ITEM_FROM_GROCERY", { id: product.id });
+        })
+        .catch(error => {
+          console.log("ERROR: " + error.message);
+        });
     } else {
-      commit("DECREASE_ITEM_QUANTITY", groceryItem);
+      const newQuantity = groceryItem.quantity - 1;
+
+      GroceryService.patchGroceryItem(groceryItem, newQuantity)
+        .then(() => {
+          commit("DECREASE_ITEM_QUANTITY", groceryItem);
+        })
+        .catch(error => {
+          console.log(error.message);
+        });
     }
   }
 };

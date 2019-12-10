@@ -11,7 +11,18 @@ const apiClient = axios.create({
 });
 
 export default {
-  getGroceries() {
+  getGroceryItems() {
     return apiClient.get("/groceries");
+  },
+  postGroceryItem(product: any) {
+    return apiClient.post("/groceries", product);
+  },
+  patchGroceryItem(product: any, newQuantity: number) {
+    return apiClient.patch("/groceries/" + product.id, {
+      quantity: newQuantity
+    });
+  },
+  deleteGroceryItem(product: any) {
+    return apiClient.delete("/groceries/" + product.id);
   }
 };

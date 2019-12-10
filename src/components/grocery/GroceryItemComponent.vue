@@ -5,7 +5,7 @@
     </div>
     <div>
       <h4 class="item__title">{{ product.title }}</h4>
-      <span class="item__price">€{{ product.price }}</span>
+      <span class="item__price">€{{ product.price.toFixed(2) }}</span>
     </div>
     <div v-if="quantityControls" class="item__quantity">
       <Icon
@@ -126,5 +126,6 @@ export default Vue.extend({
   color: #fff;
   padding: 2px;
   margin-left: auto;
+  cursor: pointer;
 }
 </style>
