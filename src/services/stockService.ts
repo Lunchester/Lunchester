@@ -19,5 +19,8 @@ export default {
   },
   patchStockItem(product: any, newQuantity: number) {
     return apiClient.patch("/stock/" + product.id, { quantity: newQuantity });
+  },
+  deleteStockItem(product: any) {
+    return apiClient.delete("/stock/" + product.id);
   }
 };

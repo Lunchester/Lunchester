@@ -72,7 +72,7 @@ const actions = {
     } else {
       const newQuantity = stockItem.quantity + 1;
 
-      StockService.patchStockItem(product, newQuantity)
+      StockService.patchStockItem(stockItem, newQuantity)
         .then(() => {
           commit("INCREMENT_ITEM_QUANTITY", stockItem);
         })
@@ -85,9 +85,23 @@ const actions = {
     const stockItem = state.items.find(item => item.id === product.id);
 
     if (stockItem.quantity == 1) {
-      commit("REMOVE_ITEM_FROM_STOCK", product.id);
+      StockService.deleteStockItem(product)
+        .then(() => {
+          commit("REMOVE_ITEM_FROM_STOCK", { id: product.id });
+        })
+        .catch(error => {
+          console.log("ERROR: " + error.message);
+        });
     } else {
-      commit("DECREASE_ITEM_QUANTITY", stockItem);
+      const newQuantity = stockItem.quantity - 1;
+
+      StockService.patchStockItem(stockItem, newQuantity)
+        .then(() => {
+          commit("DECREASE_ITEM_QUANTITY", stockItem);
+        })
+        .catch(error => {
+          console.log("ERROR: " + error.message);
+        });
     }
   }
 };
