@@ -6,35 +6,39 @@
     },
     {
       "id": 3,
-      "quantity": 1
+      "quantity": 3
     },
     {
       "id": 5,
       "quantity": 4
     },
     {
-      "id": 7,
-      "quantity": 2
-    },
-    {
-      "id": 9,
-      "quantity": 2
-    },
-    {
-      "id": 14,
-      "quantity": 1
-    },
-    {
-      "id": 15,
-      "quantity": 1
-    },
-    {
       "id": 18,
-      "quantity": 6
+      "quantity": 4
     },
     {
       "id": 20,
       "quantity": 4
+    },
+    {
+      "id": 6,
+      "quantity": 3
+    },
+    {
+      "id": 23,
+      "quantity": 2
+    },
+    {
+      "id": 22,
+      "quantity": 3
+    },
+    {
+      "id": 24,
+      "quantity": 2
+    },
+    {
+      "id": 19,
+      "quantity": 3
     }
   ],
   "groceries": [
@@ -60,7 +64,7 @@
       "id": 1,
       "title": "Fijn volkoren heel",
       "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/680010.png",
-      "price": 1.00
+      "price": 1
     },
     {
       "id": 2,
@@ -84,7 +88,7 @@
       "id": 5,
       "title": "Rond tarwe heel",
       "imgLink": "https://www.plus.nl/INTERSHOP/static/WFS/PLUS-Site/-/PLUS/nl_NL/product/M/679983.png",
-      "price": 1.00
+      "price": 1
     },
     {
       "id": 6,
