@@ -9,6 +9,11 @@
       :product="product"
       :quantityControls="true"
     />
+
+    <div class="price">
+      <span>Total</span>
+      <span>€{{ totalPrice.toFixed(2) }}</span>
+    </div>
   </div>
 </template>
 
@@ -30,14 +35,25 @@ export default Vue.extend({
   },
   computed: {
     ...mapGetters({
-      products: "grocery/getGroceryProducts"
+      products: "grocery/getGroceryProducts",
+      totalPrice: "grocery/getGroceryTotalPrice"
     })
   }
 });
 </script>
 
 <style scoped>
-.product:nth-child(odd) {
+.item:nth-child(odd) {
   background: #f5f5f5;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 24px 0;
+  padding: 16px 0;
+  font-size: 24px;
+  font-weight: 600;
+  border-top: 1px solid #e6e6e6;
 }
 </style>
