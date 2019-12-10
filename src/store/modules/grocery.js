@@ -1,7 +1,8 @@
 import GroceryService from "@/services/GroceryService.ts";
 
 const state = {
-  items: []
+  items: [],
+  taxRate: 0.09
 };
 
 const getters = {
@@ -25,7 +26,7 @@ const getters = {
     }, 0);
   },
   getGroceryTaxPrice: (state, getters) => {
-    return getters.getGroceryTotalPrice * 0.09;
+    return getters.getGroceryTotalPrice * state.taxRate;
   }
 };
 

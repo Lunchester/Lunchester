@@ -126,5 +126,6 @@ export default Vue.extend({
   color: #fff;
   padding: 2px;
   margin-left: auto;
+  cursor: pointer;
 }
 </style>

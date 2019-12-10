@@ -14,7 +14,10 @@ export default {
   getStockItems() {
     return apiClient.get("/stock");
   },
-  postStockItem(item: object) {
-    return apiClient.post("/stock", item);
+  postStockItem(product: any) {
+    return apiClient.post("/stock", product);
+  },
+  patchStockItem(product: any, newQuantity: number) {
+    return apiClient.patch("/stock/" + product.id, { quantity: newQuantity });
   }
 };
