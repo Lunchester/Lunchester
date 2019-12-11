@@ -51,31 +51,38 @@
       "lastName": "Lee"
     }
   ],
+  "specialDayVotes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "itemId": 1
+    }
+  ],
   "specialDayItems": [
     {
       "id": 1,
       "title": "Burger King",
-      "imgLink": "#"
+      "imgLink": "https://upload.wikimedia.org/wikipedia/de/thumb/c/cb/Logo_Burger_King.svg/2000px-Logo_Burger_King.svg.png"
     },
     {
       "id": 2,
       "title": "Subway",
-      "imgLink": "#"
+      "imgLink": "https://upload.wikimedia.org/wikipedia/de/thumb/c/cb/Logo_Burger_King.svg/2000px-Logo_Burger_King.svg.png"
     },
     {
       "id": 3,
       "title": "Mc Donalds",
-      "imgLink": "#"
+      "imgLink": "https://upload.wikimedia.org/wikipedia/de/thumb/c/cb/Logo_Burger_King.svg/2000px-Logo_Burger_King.svg.png"
     },
     {
       "id": 4,
       "title": "KFC",
-      "imgLink": "#"
+      "imgLink": "https://upload.wikimedia.org/wikipedia/de/thumb/c/cb/Logo_Burger_King.svg/2000px-Logo_Burger_King.svg.png"
     },
     {
       "id": 5,
       "title": "Dominos's",
-      "imgLink": "#"
+      "imgLink": "https://upload.wikimedia.org/wikipedia/de/thumb/c/cb/Logo_Burger_King.svg/2000px-Logo_Burger_King.svg.png"
     }
   ],
   "stock": [
@@ -127,7 +134,7 @@
     },
     {
       "id": 7,
-      "quantity": 3
+      "quantity": 4
     },
     {
       "id": 9,

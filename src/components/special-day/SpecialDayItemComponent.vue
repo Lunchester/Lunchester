@@ -2,9 +2,9 @@
   <div class="item">
     <span class="item__position">1</span>
     <div class="item__image">
-      <img src="https://picsum.photos/100/100" alt="Image" />
+      <img :src="specialDayItem.imgLink" :alt="specialDayItem.title" />
     </div>
-    <span class="item__title">Burger King</span>
+    <span class="item__title">{{ specialDayItem.title }}</span>
     <div class="item__icon">
       <Icon
         class="icon__heart"
