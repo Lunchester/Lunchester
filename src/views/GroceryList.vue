@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="groceries">
     <Header title="Grocery list" />
     <Search :hasAddButton="true" addButtonLink="grocery-add" />
 
@@ -49,6 +49,10 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.groceries {
+  margin-bottom: 120px;
+}
+
 .item:nth-child(odd) {
   background: #f5f5f5;
 }

@@ -10,6 +10,9 @@ import Header from "@/components/shared/BaseHeaderComponent";
 export default {
   components: {
     Header
+  },
+  created() {
+    this.$store.dispatch("user/fetchUsers");
   }
 };
 </script>
