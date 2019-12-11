@@ -11,7 +11,10 @@ const apiClient = axios.create({
 });
 
 export default {
-  getSpecialDayItem() {
+  getSpecialDayItems() {
     return apiClient.get("/specialdayitems");
+  },
+  getSpecialDayVotes() {
+    return apiClient.get("/specialdayvotes");
   }
 };

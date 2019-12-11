@@ -1,7 +1,8 @@
 import SpecialDayService from "@/services/SpecialDayService";
 
 const state = {
-  items: []
+  items: [],
+  votes: []
 };
 
 const getters = {};
@@ -9,14 +10,27 @@ const getters = {};
 const mutations = {
   SET_SPECIAL_DAY_ITEMS(state, items) {
     state.items = items;
+  },
+  SET_SPECIAL_DAY_VOTES(state, votes) {
+    state.votes = votes;
   }
 };
 
 const actions = {
-  fetchSpecialDayItems({ commit }) {
-    SpecialDayService.getSpecialDayItem()
+  fetchSpecialDayItems({ commit, dispatch }) {
+    dispatch("fetchSpecialDayVotes");
+    SpecialDayService.getSpecialDayItems()
       .then(response => {
         commit("SET_SPECIAL_DAY_ITEMS", response.data);
+      })
+      .catch(error => {
+        console.log("ERROR: " + error.message);
+      });
+  },
+  fetchSpecialDayVotes({ commit }) {
+    SpecialDayService.getSpecialDayVotes()
+      .then(response => {
+        commit("SET_SPECIAL_DAY_VOTES", response.data);
       })
       .catch(error => {
         console.log("ERROR: " + error.message);
