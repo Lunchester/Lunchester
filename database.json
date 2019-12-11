@@ -1,15 +1,82 @@
 {
   "users": [
-    { "id": 1, "firstName": "Rick", "lastName": "Dalton" },
-    { "id": 2, "firstName": "Cliff", "lastName": "Booth" },
-    { "id": 3, "firstName": "Sharon", "lastName": "Tate" },
-    { "id": 4, "firstName": "Jay", "lastName": "Sebring" },
-    { "id": 5, "firstName": "James", "lastName": "Stacy" },
-    { "id": 6, "firstName": "Trudi", "lastName": "Fracer" },
-    { "id": 7, "firstName": "Tex", "lastName": "Watson" },
-    { "id": 8, "firstName": "Sqeaky", "lastName": "Fromme" },
-    { "id": 9, "firstName": "George", "lastName": "Sphan" },
-    { "id": 10, "firstName": "Bruce", "lastName": "Lee" }
+    {
+      "id": 1,
+      "firstName": "Rick",
+      "lastName": "Dalton"
+    },
+    {
+      "id": 2,
+      "firstName": "Cliff",
+      "lastName": "Booth"
+    },
+    {
+      "id": 3,
+      "firstName": "Sharon",
+      "lastName": "Tate"
+    },
+    {
+      "id": 4,
+      "firstName": "Jay",
+      "lastName": "Sebring"
+    },
+    {
+      "id": 5,
+      "firstName": "James",
+      "lastName": "Stacy"
+    },
+    {
+      "id": 6,
+      "firstName": "Trudi",
+      "lastName": "Fracer"
+    },
+    {
+      "id": 7,
+      "firstName": "Tex",
+      "lastName": "Watson"
+    },
+    {
+      "id": 8,
+      "firstName": "Sqeaky",
+      "lastName": "Fromme"
+    },
+    {
+      "id": 9,
+      "firstName": "George",
+      "lastName": "Sphan"
+    },
+    {
+      "id": 10,
+      "firstName": "Bruce",
+      "lastName": "Lee"
+    }
+  ],
+  "specialDayChoices": [
+    {
+      "id": 1,
+      "title": "Burger King",
+      "imgLink": "#"
+    },
+    {
+      "id": 2,
+      "title": "Subway",
+      "imgLink": "#"
+    },
+    {
+      "id": 3,
+      "title": "Mc Donalds",
+      "imgLink": "#"
+    },
+    {
+      "id": 4,
+      "title": "KFC",
+      "imgLink": "#"
+    },
+    {
+      "id": 5,
+      "title": "Dominos's",
+      "imgLink": "#"
+    }
   ],
   "stock": [
     {
@@ -64,11 +131,11 @@
     },
     {
       "id": 9,
-      "quantity": 4
+      "quantity": 5
     },
     {
       "id": 1,
-      "quantity": 3
+      "quantity": 5
     }
   ],
   "products": [
