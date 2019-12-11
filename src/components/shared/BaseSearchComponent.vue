@@ -39,18 +39,6 @@ export default Vue.extend({
   position: relative;
 }
 
-.search::before {
-  content: "";
-  display: block;
-  background-color: #fff;
-  height: 24px;
-  width: calc(100% + 48px);
-  border-radius: 24px 24px 0 0;
-  position: absolute;
-  top: -24px;
-  left: -24px;
-}
-
 .search__input {
   border: none;
   background: #f5f5f5;

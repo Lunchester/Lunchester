@@ -24,5 +24,17 @@ export default Vue.extend({
   font-size: 18px;
   padding: 24px 0 48px;
   background: #7ecf95;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  height: 24px;
+  width: 100%;
+  border-radius: 24px 24px 0 0;
+  position: absolute;
+  bottom: 0;
 }
 </style>
