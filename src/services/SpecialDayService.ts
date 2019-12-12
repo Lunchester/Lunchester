@@ -16,5 +16,8 @@ export default {
   },
   getSpecialDayVotes() {
     return apiClient.get("/specialdayvotes");
+  },
+  postSpecialDayVote(vote: any) {
+    return apiClient.post("/specialdayvotes", vote);
   }
 };

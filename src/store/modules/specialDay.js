@@ -7,11 +7,13 @@ const state = {
 
 const getters = {
   getSpecialDayItemTotalVotes: state => id => {
-    return state.votes.reduce((total, vote) => {
+    let total = 0;
+    state.votes.forEach(vote => {
       if (vote.itemId == id) {
-        return total + 1;
+        total += 1;
       }
-    }, 0);
+    });
+    return total;
   }
 };
 
@@ -21,6 +23,9 @@ const mutations = {
   },
   SET_SPECIAL_DAY_VOTES(state, votes) {
     state.votes = votes;
+  },
+  ADD_SPECIAL_DAY_VOTE(state, vote) {
+    state.votes.push(vote);
   }
 };
 
@@ -39,6 +44,15 @@ const actions = {
     SpecialDayService.getSpecialDayVotes()
       .then(response => {
         commit("SET_SPECIAL_DAY_VOTES", response.data);
+      })
+      .catch(error => {
+        console.log("ERROR: " + error.message);
+      });
+  },
+  addSpecialDayVote({ commit }, vote) {
+    SpecialDayService.postSpecialDayVote(vote)
+      .then(() => {
+        commit("ADD_SPECIAL_DAY_VOTE", vote);
       })
       .catch(error => {
         console.log("ERROR: " + error.message);

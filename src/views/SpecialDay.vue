@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { mapState, mapGetters } from "vuex";
+import { mapState } from "vuex";
 import Header from "@/components/shared/BaseHeaderComponent.vue";
 import Item from "@/components/special-day/SpecialDayItemComponent.vue";
 
@@ -18,13 +18,9 @@ export default Vue.extend({
   },
   created() {
     this.$store.dispatch("specialDay/fetchSpecialDayItems");
-    this.$store.dispatch("user/setCurrentUser", this.user);
   },
   computed: {
-    ...mapState("specialDay", ["items"]),
-    ...mapGetters({
-      user: "user/getRandomUser"
-    })
+    ...mapState("specialDay", ["items"])
   }
 });
 </script>

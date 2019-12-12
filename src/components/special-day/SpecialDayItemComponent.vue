@@ -7,6 +7,7 @@
     <span class="item__title">{{ specialDayItem.title }}</span>
     <div class="item__icon">
       <Icon
+        @click.native="voteOnSpecialDayItem"
         class="icon__heart"
         name="heart"
         width="18"
@@ -21,7 +22,7 @@
 <script>
 import Vue from "vue";
 import Icon from "@/components/shared/BaseIconComponent.vue";
-import { mapGetters } from "vuex";
+import { mapState, mapGetters } from "vuex";
 
 export default Vue.extend({
   components: {
@@ -36,7 +37,19 @@ export default Vue.extend({
     totalVotes() {
       return this.getSpecialDayItemTotalVotes(this.specialDayItem.id);
     },
+    ...mapState("specialDay", ["votes"]),
     ...mapGetters("specialDay", ["getSpecialDayItemTotalVotes"])
+  },
+  methods: {
+    voteOnSpecialDayItem() {
+      const vote = {
+        id: Math.floor(Math.random() * 10000000),
+        userId: this.$store.state.user.user.id,
+        itemId: this.specialDayItem.id
+      };
+
+      this.$store.dispatch("specialDay/addSpecialDayVote", vote);
+    }
   }
 });
 </script>
