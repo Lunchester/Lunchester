@@ -1,7 +1,8 @@
 import UserService from "@/services/UserService";
 
 const state = {
-  users: []
+  users: [],
+  user: {}
 };
 
 const getters = {
@@ -13,14 +14,18 @@ const getters = {
 const mutations = {
   SET_USERS(state, users) {
     state.users = users;
+  },
+  SET_USER(state, user) {
+    state.user = user;
   }
 };
 
 const actions = {
-  fetchUsers({ commit }) {
+  fetchUsers({ commit, getters }) {
     UserService.getUsers()
       .then(response => {
         commit("SET_USERS", response.data);
+        commit("SET_USER", getters.getRandomUser);
       })
       .catch(error => {
         console.log("ERROR: " + error.message);

@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapGetters } from "vuex";
 import NavBar from "@/components/shared/NavBarComponent.vue";
 
 export default Vue.extend({
@@ -14,6 +15,7 @@ export default Vue.extend({
     NavBar
   },
   created() {
+    this.$store.dispatch("user/fetchUsers");
     this.$store.dispatch("product/fetchProducts");
   }
 });
