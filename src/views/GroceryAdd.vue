@@ -1,6 +1,6 @@
 <template>
   <div class="items">
-    <Header title="Add to grocery list" />
+    <Header title="Add to grocery list" :hasBackButton="true" />
     <Search />
 
     <Item

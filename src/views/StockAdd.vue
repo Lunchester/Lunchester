@@ -1,6 +1,6 @@
 <template>
   <div class="items">
-    <Header title="Add item to stock" />
+    <Header title="Add item to stock" :hasBackButton="true" />
     <Search />
     <Item
       v-for="product in products"
