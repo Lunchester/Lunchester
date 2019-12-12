@@ -53,119 +53,24 @@
   ],
   "specialDayVotes": [
     {
-      "id": 4725962,
-      "userId": 4,
-      "itemId": 1
-    },
-    {
-      "id": 4128621,
-      "userId": 4,
-      "itemId": 1
-    },
-    {
-      "id": 416679,
+      "id": 1250129,
       "userId": 10,
       "itemId": 1
     },
     {
-      "id": 9110103,
-      "userId": 10,
-      "itemId": 1
-    },
-    {
-      "id": 1409431,
-      "userId": 10,
-      "itemId": 1
-    },
-    {
-      "id": 2717791,
-      "userId": 10,
+      "id": 1013667,
+      "userId": 6,
       "itemId": 2
     },
     {
-      "id": 4724181,
-      "userId": 10,
-      "itemId": 2
-    },
-    {
-      "id": 8407285,
-      "userId": 10,
+      "id": 1883427,
+      "userId": 6,
       "itemId": 3
     },
     {
-      "id": 7692549,
-      "userId": 10,
-      "itemId": 3
-    },
-    {
-      "id": 3650117,
+      "id": 5201306,
       "userId": 9,
-      "itemId": 3
-    },
-    {
-      "id": 6610241,
-      "userId": 9,
-      "itemId": 4
-    },
-    {
-      "id": 2075943,
-      "userId": 9,
-      "itemId": 5
-    },
-    {
-      "id": 739027,
-      "userId": 9,
-      "itemId": 5
-    },
-    {
-      "id": 1819659,
-      "userId": 2,
-      "itemId": 4
-    },
-    {
-      "id": 6774631,
-      "userId": 2,
-      "itemId": 3
-    },
-    {
-      "id": 7076286,
-      "userId": 2,
-      "itemId": 3
-    },
-    {
-      "id": 2171469,
-      "userId": 4,
       "itemId": 1
-    },
-    {
-      "id": 4087058,
-      "userId": 4,
-      "itemId": 2
-    },
-    {
-      "id": 4279202,
-      "userId": 4,
-      "itemId": 3
-    },
-    {
-      "id": 6028983,
-      "userId": 4,
-      "itemId": 4
-    },
-    {
-      "id": 5309647,
-      "userId": 4,
-      "itemId": 5
-    },
-    {
-      "id": 635688,
-      "userId": 4,
-      "itemId": 5
-    },
-    {
-      "id": 8751357,
-      "userId": 4,
-      "itemId": 4
     }
   ],
   "specialDayItems": [

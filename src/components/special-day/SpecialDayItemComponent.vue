@@ -1,6 +1,6 @@
 <template>
   <div class="item">
-    <span class="item__position">1</span>
+    <span class="item__position">{{ specialDayItem.id }}</span>
     <div class="item__image">
       <img :src="specialDayItem.imgLink" :alt="specialDayItem.title" />
     </div>
@@ -9,6 +9,7 @@
       <Icon
         @click.native="voteOnSpecialDayItem"
         class="icon__heart"
+        :class="{ 'icon__heart--full': hasCurrentUserVoted }"
         name="heart"
         width="18"
         height="18"
@@ -37,6 +38,13 @@ export default Vue.extend({
     totalVotes() {
       return this.getSpecialDayItemTotalVotes(this.specialDayItem.id);
     },
+    hasCurrentUserVoted() {
+      return this.votes.some(
+        vote =>
+          vote.userId === this.user.id && vote.itemId === this.specialDayItem.id
+      );
+    },
+    ...mapState("user", ["user"]),
     ...mapState("specialDay", ["votes"]),
     ...mapGetters("specialDay", ["getSpecialDayItemTotalVotes"])
   },
@@ -95,6 +103,10 @@ export default Vue.extend({
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon__heart--full {
+  fill: #fff;
 }
 
 .item__votes {
