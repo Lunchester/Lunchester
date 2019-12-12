@@ -5,7 +5,15 @@ const state = {
   votes: []
 };
 
-const getters = {};
+const getters = {
+  getSpecialDayItemTotalVotes: state => id => {
+    return state.votes.reduce((total, vote) => {
+      if (vote.itemId == id) {
+        return total + 1;
+      }
+    }, 0);
+  }
+};
 
 const mutations = {
   SET_SPECIAL_DAY_ITEMS(state, items) {

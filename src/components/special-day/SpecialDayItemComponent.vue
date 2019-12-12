@@ -14,14 +14,16 @@
         strokeWidth="2"
       />
     </div>
-    <span class="item__votes">3</span>
+    <span class="item__votes">{{ totalVotes ? totalVotes : 0 }}</span>
   </div>
 </template>
 
 <script>
-import Icon from "@/components/shared/BaseIconComponent";
+import Vue from "vue";
+import Icon from "@/components/shared/BaseIconComponent.vue";
+import { mapGetters } from "vuex";
 
-export default {
+export default Vue.extend({
   components: {
     Icon
   },
@@ -29,8 +31,14 @@ export default {
     specialDayItem: {
       type: Object
     }
+  },
+  computed: {
+    totalVotes() {
+      return this.getSpecialDayItemTotalVotes(this.specialDayItem.id);
+    },
+    ...mapGetters("specialDay", ["getSpecialDayItemTotalVotes"])
   }
-};
+});
 </script>
 
 <style scoped>
