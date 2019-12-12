@@ -18,7 +18,7 @@
       </li>
       <li>
         <router-link class="navbar__item" :to="{ name: 'grocery-list' }">
-          <Icon name="shopping-cart" width="30" height="30"></Icon>
+          <Icon name="shopping-bag" width="30" height="30"></Icon>
         </router-link>
       </li>
     </ul>
@@ -60,5 +60,22 @@ export default Vue.extend({
 
 .navbar__item {
   color: #000;
+  position: relative;
+}
+
+.router-link-exact-active .icon {
+  stroke: #7ecf95;
+}
+
+.router-link-exact-active::before {
+  content: "";
+  display: block;
+  background-color: #7ecf95;
+  height: 5px;
+  width: 5px;
+  border-radius: 999px;
+  position: absolute;
+  top: -22px;
+  left: 13px;
 }
 </style>

@@ -85,7 +85,7 @@ export default Vue.extend({
 .item__image img {
   width: 56px;
   height: 56px;
-  border-radius: 999px;
+  border-radius: 10px;
 }
 
 .item__title {
