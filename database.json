@@ -71,6 +71,51 @@
       "id": 5201306,
       "userId": 9,
       "itemId": 1
+    },
+    {
+      "id": 8275168,
+      "userId": 8,
+      "itemId": 1
+    },
+    {
+      "id": 9447112,
+      "userId": 2,
+      "itemId": 1
+    },
+    {
+      "id": 2177174,
+      "userId": 2,
+      "itemId": 1
+    },
+    {
+      "id": 2543709,
+      "userId": 4,
+      "itemId": 1
+    },
+    {
+      "id": 42072,
+      "userId": 4,
+      "itemId": 3
+    },
+    {
+      "id": 6923499,
+      "userId": 4,
+      "itemId": 2
+    },
+    {
+      "id": 2552415,
+      "userId": 4,
+      "itemId": 3
+    },
+    {
+      "id": 2260135,
+      "userId": 8,
+      "itemId": 2
+    },
+    {
+      "id": 6747857,
+      "userId": 3,
+      "itemId": 2
     }
   ],
   "specialDayItems": [
@@ -102,46 +147,38 @@
   ],
   "stock": [
     {
-      "id": 3,
-      "quantity": 4
-    },
-    {
-      "id": 5,
-      "quantity": 4
-    },
-    {
-      "id": 18,
-      "quantity": 4
-    },
-    {
-      "id": 20,
-      "quantity": 4
-    },
-    {
-      "id": 6,
-      "quantity": 3
-    },
-    {
-      "id": 23,
-      "quantity": 2
-    },
-    {
-      "id": 22,
-      "quantity": 3
-    },
-    {
-      "id": 24,
-      "quantity": 2
-    },
-    {
       "id": 19,
+      "quantity": 4
+    },
+    {
+      "id": 4,
+      "quantity": 2
+    },
+    {
+      "id": 9,
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "quantity": 1
+    },
+    {
+      "id": 14,
+      "quantity": 1
+    },
+    {
+      "id": 1,
       "quantity": 3
     }
   ],
   "groceries": [
     {
       "id": 3,
-      "quantity": 2
+      "quantity": 6
     },
     {
       "id": 7,
@@ -149,11 +186,19 @@
     },
     {
       "id": 9,
-      "quantity": 5
+      "quantity": 6
     },
     {
       "id": 1,
-      "quantity": 5
+      "quantity": 7
+    },
+    {
+      "id": 13,
+      "quantity": 8
+    },
+    {
+      "id": 12,
+      "quantity": 10
     }
   ],
   "products": [
