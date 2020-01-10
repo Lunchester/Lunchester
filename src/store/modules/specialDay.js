@@ -6,6 +6,7 @@ const state = {
 };
 
 const getters = {
+  // Get the total votes on special day items 
   getSpecialDayItemTotalVotes: state => id => {
     let total = 0;
     state.votes.forEach(vote => {
@@ -30,6 +31,7 @@ const mutations = {
 };
 
 const actions = {
+  // Fetch Special day items from database
   fetchSpecialDayItems({ commit, dispatch }) {
     dispatch("fetchSpecialDayVotes");
     SpecialDayService.getSpecialDayItems()
@@ -40,6 +42,7 @@ const actions = {
         console.log("ERROR: " + error.message);
       });
   },
+  // Fetch Special day votes from database
   fetchSpecialDayVotes({ commit }) {
     SpecialDayService.getSpecialDayVotes()
       .then(response => {
@@ -49,6 +52,7 @@ const actions = {
         console.log("ERROR: " + error.message);
       });
   },
+  // Add vote to special day item
   addSpecialDayVote({ commit }, vote) {
     SpecialDayService.postSpecialDayVote(vote)
       .then(() => {

@@ -21,6 +21,7 @@ const mutations = {
 };
 
 const actions = {
+  // Fetch users from databse
   fetchUsers({ commit, getters }) {
     UserService.getUsers()
       .then(response => {

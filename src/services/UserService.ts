@@ -11,6 +11,7 @@ const apiClient = axios.create({
 });
 
 export default {
+  // Fetch all users from database
   getUsers() {
     return apiClient.get("/users");
   }

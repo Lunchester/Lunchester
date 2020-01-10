@@ -1,4 +1,4 @@
-import GroceryService from "@/services/GroceryService.ts";
+import GroceryService from "@/services/GroceryService.js";
 import StockService from "@/services/StockService";
 
 const state = {
@@ -7,6 +7,7 @@ const state = {
 };
 
 const getters = {
+  // Get grocery product properties
   getGroceryProducts: (state, getters, rootState) => {
     return state.items.map(({ id, quantity }) => {
       const product = rootState.product.products.find(
@@ -60,6 +61,7 @@ const mutations = {
 };
 
 const actions = {
+  // Fetch grocery items from database
   fetchGroceryItems({ commit }) {
     GroceryService.getGroceryItems()
       .then(response => {
@@ -69,6 +71,7 @@ const actions = {
         console.log("ERROR: " + error.message);
       });
   },
+  // Add item to grocery list or increment if already in stock
   addItemToGrocery({ state, commit }, product) {
     const groceryItem = state.items.find(item => item.id === product.id);
 
@@ -92,6 +95,7 @@ const actions = {
         });
     }
   },
+  // Remove item from grocery list or decrease quantity
   removeItemFromGrocery({ state, commit }, product) {
     const groceryItem = state.items.find(item => item.id === product.id);
 

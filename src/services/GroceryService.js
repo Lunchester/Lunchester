@@ -16,17 +16,17 @@ export default {
     return apiClient.get("/groceries");
   },
   // Add grocery item to database
-  postGroceryItem(product: any) {
+  postGroceryItem(product) {
     return apiClient.post("/groceries", product);
   },
   // Update grocery item in database
-  patchGroceryItem(product: any, newQuantity: number) {
+  patchGroceryItem(product, newQuantity) {
     return apiClient.patch("/groceries/" + product.id, {
       quantity: newQuantity
     });
   },
   // Delete grocery item from database
-  deleteGroceryItem(product: any) {
+  deleteGroceryItem(product) {
     return apiClient.delete("/groceries/" + product.id);
   }
 };

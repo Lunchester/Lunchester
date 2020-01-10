@@ -11,12 +11,15 @@ const apiClient = axios.create({
 });
 
 export default {
+  // Fetch all spcial day items from database
   getSpecialDayItems() {
     return apiClient.get("/specialdayitems");
   },
+  // Fetchh all special day votes from database
   getSpecialDayVotes() {
     return apiClient.get("/specialdayvotes");
   },
+  // Add special day vote to database
   postSpecialDayVote(vote: any) {
     return apiClient.post("/specialdayvotes", vote);
   }

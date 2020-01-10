@@ -11,6 +11,7 @@ const apiClient = axios.create({
 });
 
 export default {
+  // Fetch all products from database
   getProducts() {
     return apiClient.get("/products");
   }

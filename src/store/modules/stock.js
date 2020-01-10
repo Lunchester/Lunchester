@@ -5,6 +5,7 @@ const state = {
 };
 
 const getters = {
+  // Get stock product properties
   getStockProducts: (state, getters, rootState) => {
     return state.items.map(({ id, quantity }) => {
       const product = rootState.product.products.find(
@@ -49,6 +50,7 @@ const mutations = {
 };
 
 const actions = {
+  // Fetch stock items from database
   fetchStockItems({ commit }) {
     StockService.getStockItems()
       .then(response => {
@@ -58,6 +60,7 @@ const actions = {
         console.log("ERROR: " + error.message);
       });
   },
+  // Add item to stock or increment if already in stock
   addItemToStock({ state, commit }, product) {
     const stockItem = state.items.find(item => item.id === product.id);
 
@@ -81,6 +84,7 @@ const actions = {
         });
     }
   },
+  // Remove item from stock or decrease quantity
   removeItemFromStock({ state, commit }, product) {
     const stockItem = state.items.find(item => item.id === product.id);
 

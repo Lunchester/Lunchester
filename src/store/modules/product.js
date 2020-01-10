@@ -17,6 +17,7 @@ const mutations = {
 };
 
 const actions = {
+  // Fetch product from database
   fetchProducts({ commit }) {
     ProductService.getProducts()
       .then(response => {
