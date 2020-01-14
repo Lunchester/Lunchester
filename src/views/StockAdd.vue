@@ -1,0 +1,41 @@
+<template>
+  <div class="items">
+    <Header title="Add item to stock" :hasBackButton="true" />
+    <Search />
+    <Item
+      v-for="product in products"
+      :key="product.id"
+      :product="product"
+      :addControls="true"
+    />
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from "vue";
+import { mapState } from "vuex";
+import Item from "@/components/stock/StockItemComponent.vue";
+import Search from "@/components/shared/BaseSearchComponent.vue";
+import Header from "@/components/shared/BaseHeaderComponent.vue";
+
+export default Vue.extend({
+  components: {
+    Item,
+    Search,
+    Header
+  },
+  computed: {
+    ...mapState("product", ["products"])
+  }
+});
+</script>
+
+<style scoped>
+.items {
+  margin-bottom: 60px;
+}
+
+.item:nth-child(odd) {
+  background: #f6f6f6;
+}
+</style>
