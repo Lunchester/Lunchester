@@ -1,5 +1,5 @@
 import GroceryService from "@/services/GroceryService.js";
-import StockService from "@/services/StockService";
+import StockService from "@/services/StockService.js";
 
 const state = {
   items: [],

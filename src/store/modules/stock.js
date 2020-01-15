@@ -1,4 +1,4 @@
-import StockService from "@/services/StockService.ts";
+import StockService from "@/services/StockService.js";
 
 const state = {
   items: []

@@ -20,7 +20,7 @@ export default {
     return apiClient.get("/specialdayvotes");
   },
   // Add special day vote to database
-  postSpecialDayVote(vote: any) {
+  postSpecialDayVote(vote) {
     return apiClient.post("/specialdayvotes", vote);
   }
 };

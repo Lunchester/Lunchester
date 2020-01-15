@@ -1,4 +1,4 @@
-import ProductService from "@/services/ProductService.ts";
+import ProductService from "@/services/ProductService.js";
 
 const state = {
   products: []

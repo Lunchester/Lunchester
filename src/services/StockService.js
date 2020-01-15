@@ -16,15 +16,15 @@ export default {
     return apiClient.get("/stock");
   },
   // Add stock item to database
-  postStockItem(product: any) {
+  postStockItem(product) {
     return apiClient.post("/stock", product);
   },
   // Update stock item in database
-  patchStockItem(product: any, newQuantity: number) {
+  patchStockItem(product, newQuantity) {
     return apiClient.patch("/stock/" + product.id, { quantity: newQuantity });
   },
   // Delete stock item from database
-  deleteStockItem(product: any) {
+  deleteStockItem(product) {
     return apiClient.delete("/stock/" + product.id);
   }
 };

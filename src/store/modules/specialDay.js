@@ -1,4 +1,4 @@
-import SpecialDayService from "@/services/SpecialDayService";
+import SpecialDayService from "@/services/SpecialDayService.js";
 
 const state = {
   items: [],
@@ -6,7 +6,7 @@ const state = {
 };
 
 const getters = {
-  // Get the total votes on special day items 
+  // Get the total votes on special day items
   getSpecialDayItemTotalVotes: state => id => {
     let total = 0;
     state.votes.forEach(vote => {
